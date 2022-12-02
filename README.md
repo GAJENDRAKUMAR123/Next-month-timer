@@ -5,9 +5,9 @@ using date class:
 Date()
 
 method:
-getDays()\n
-getYear()\n
-getMonth()\n
-getHours()\n
-getMinutes()\n
-getSeconds()\n
+getDays()
+getYear()
+getMonth()
+getHours()
+getMinutes()
+getSeconds()

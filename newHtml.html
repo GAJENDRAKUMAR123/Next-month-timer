@@ -7,13 +7,6 @@
     <title>COUNTDOWN</title>
 </head>
 <body>
-    <h2>
-        <span id="daysInfo"></span> Days left,
-        <span id="hourInfo"></span> hour left,
-        <span id="minuteInfo"></span> minute left,
-        <span id="secondInfo"></span> second left.
-    
-    </h2>
     <div id="timer-body">
 
 
@@ -44,12 +37,6 @@
     document.getElementById("hourData").innerText =(24 - (d.getHours()));
     document.getElementById("minuteData").innerText =(60-(d.getMinutes()));
     document.getElementById("secondData").innerText =60 - (d.getSeconds());
-
-    
-    document.getElementById("daysInfo").innerText =31 - (7 - d.getDay());
-    document.getElementById("hourInfo").innerText =(31 - (7 - d.getDay())) * 24;
-    document.getElementById("minuteInfo").innerText =(31 - (7 - d.getDay())) * 24 * 60;
-    document.getElementById("secondInfo").innerText =(31 - (7 - d.getDay())) * 24 * 60 * 60;
 
     setTimeout("location.reload(true);",1000);
     

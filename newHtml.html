@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newCSS.css">
+    <title>COUNTDOWN</title>
+</head>
+<body>
+    <h2>
+        <span id="daysInfo"></span> Days left,
+        <span id="hourInfo"></span> hour left,
+        <span id="minuteInfo"></span> minute left,
+        <span id="secondInfo"></span> second left.
+    
+    </h2>
+    <div id="timer-body">
+
+
+        <div id="timer">
+        <div class="box"id="days">
+            <h1 id="daysData"></h1>
+            <h3>DAYS</h3>
+        </div>
+        <div class="box"id="hour">
+            <h1 id="hourData">00</h1>
+            <h3>HOUR</h3>
+        </div>
+        <div class="box"id="minutes">
+            <h1 id="minuteData">00</h1>
+            <h3>MINUTE</h3>
+        </div>
+        <div class="box"id="second">
+            <h1 id="secondData">00</h1>
+            <h3>SECOND</h3>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+    const d = new Date();
+    document.getElementById("daysData").innerText =31 - (7 - d.getDay());
+    document.getElementById("hourData").innerText =(24 - (d.getHours()));
+    document.getElementById("minuteData").innerText =(60-(d.getMinutes()));
+    document.getElementById("secondData").innerText =60 - (d.getSeconds());
+
+    
+    document.getElementById("daysInfo").innerText =31 - (7 - d.getDay());
+    document.getElementById("hourInfo").innerText =(31 - (7 - d.getDay())) * 24;
+    document.getElementById("minuteInfo").innerText =(31 - (7 - d.getDay())) * 24 * 60;
+    document.getElementById("secondInfo").innerText =(31 - (7 - d.getDay())) * 24 * 60 * 60;
+
+    setTimeout("location.reload(true);",1000);
+    
+    </script>
+</body>
+</html>
